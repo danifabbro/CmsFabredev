@@ -15,14 +15,8 @@
     $dsn = "$type:host=$server;dbname=$db;port=$port;charset=$charset";
 
     //impostazione per gli upload dei file
+    define('MEDIA_TYPES',['image/jpeg','image/png','image/gif',]);
+    define('FILE_EXTENSIONS',['jpeg','jpg','png','gif',]);
+    define('MAX_SIZE','5242880');
+    define('UPLOADS', dirname(__DIR__, 1) . DIRECTORY_SEPARATOR . ROOT_FOLDER . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR);
 ?>
-<!DOCTYPE html>
-<head>
-</head>
-<body>
-    <?php
-        if($dsn == true){
-        echo "la connessione è corretta";
-    }
-    ?>
-</body>
